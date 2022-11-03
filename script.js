@@ -4,7 +4,9 @@ const context = canvas.getContext('2d')
 
 const frameCount = 1176
 const currentFrame = index =>
-	`sequence/${index.toString().padStart(4, '0')}.jpg`
+	`https://storage.googleapis.com/humanity-img-sequence/${index
+		.toString()
+		.padStart(4, '0')}.jpg`
 
 const preloadImages = () => {
 	for (let i = 0; i < frameCount; i++) {
