@@ -8,14 +8,22 @@ body .container {
   margin: 0 auto;
   position: relative;
 }
+body .container .content {
+  height: 100vh;
+  background-color: #000;
+}
+body .container .content p {
+  color: white;
+}
 body .container canvas {
   width: 100vw;
   max-width: 515px;
   height: 100vh;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: sticky;
+  top: 0;
+}
+body .container canvas.ended {
+  position: static;
 }
 
 /*# sourceMappingURL=styles.css.map */

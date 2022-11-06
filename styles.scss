@@ -6,14 +6,25 @@ body {
 		height: 4000vh;
 		margin: 0 auto;
 		position: relative;
+		.content {
+			height: 100vh;
+			background-color: #000;
+			p {
+				color: white;
+			}
+		}
 		canvas {
 			width: 100vw;
 			max-width: 515px;
 			height: 100vh;
-			position: fixed;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
+			position: sticky;
+			top: 0;
+			&.ended {
+				position: static;
+			}
+			//left: 50%;
+			//top: 50%;
+			//transform: translate(-50%, -50%);
 		}
 	}
 }

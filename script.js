@@ -38,6 +38,10 @@ window.addEventListener('scroll', () => {
 	)
 
 	requestAnimationFrame(() => updateImage(frameIndex + 1))
+
+	if (frameIndex >= 1175) {
+		canvas.classList.add('ended')
+	}
 })
 
 preloadImages()
