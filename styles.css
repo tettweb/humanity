@@ -2,28 +2,48 @@ body {
   margin: 0;
   background-color: #000;
 }
-body .container {
-  max-width: 500px;
-  height: 4000vh;
+body .canvasContainer {
+  max-width: 720px;
+  height: 2000vh;
   margin: 0 auto;
   position: relative;
-}
-body .container .content {
-  height: 100vh;
-  background-color: #000;
-}
-body .container .content p {
-  color: white;
-}
-body .container canvas {
-  width: 100vw;
-  max-width: 515px;
-  height: 100vh;
-  position: sticky;
   top: 0;
 }
-body .container canvas.ended {
+body .canvasContainer.ended {
+  height: auto;
+}
+body .canvasContainer .audioControl {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  z-index: 1;
+}
+body .canvasContainer .audioControl img {
+  width: 50px;
+  position: fixed;
+  cursor: pointer;
+  opacity: 0.2;
+  transition: opacity 0.2s ease;
+}
+body .canvasContainer .audioControl img:hover {
+  opacity: 0.6;
+}
+body .canvasContainer canvas {
+  width: 100vw;
+  max-width: 720px;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+}
+body .canvasContainer canvas.ended {
   position: static;
+}
+body .content {
+  height: 100vh;
+}
+body .content p {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

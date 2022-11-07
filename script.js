@@ -1,6 +1,22 @@
 const html = document.documentElement
 const canvas = document.querySelector('canvas')
 const context = canvas.getContext('2d')
+const muteButton = document.getElementById('mute')
+const audio = new Audio('audio.mp3')
+
+let isMuted = true
+
+muteButton.addEventListener('click', () => {
+	if (isMuted) {
+		audio.play()
+		muteButton.src = 'unmute.png'
+		isMuted = false
+	} else {
+		audio.pause()
+		muteButton.src = 'mute.png'
+		isMuted = true
+	}
+})
 
 const frameCount = 1176
 const currentFrame = index =>
@@ -41,6 +57,7 @@ window.addEventListener('scroll', () => {
 
 	if (frameIndex >= 1175) {
 		canvas.classList.add('ended')
+		document.querySelector('.canvasContainer').classList.add('ended')
 	}
 })
 

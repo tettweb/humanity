@@ -1,30 +1,48 @@
 body {
 	margin: 0;
 	background-color: #000;
-	.container {
-		max-width: 500px;
-		height: 4000vh;
+	.canvasContainer {
+		max-width: 720px;
+		height: 2000vh;
 		margin: 0 auto;
 		position: relative;
-		.content {
-			height: 100vh;
-			background-color: #000;
-			p {
-				color: white;
+		top: 0;
+		&.ended {
+			height: auto;
+		}
+		.audioControl {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			width: 50px;
+			z-index: 1;
+			img {
+				width: 50px;
+				position: fixed;
+				cursor: pointer;
+				opacity: 0.2;
+				transition: opacity 0.2s ease;
+				&:hover {
+					opacity: 0.6;
+				}
 			}
 		}
 		canvas {
 			width: 100vw;
-			max-width: 515px;
+			max-width: 720px;
 			height: 100vh;
-			position: sticky;
 			top: 0;
+			position: fixed;
 			&.ended {
 				position: static;
 			}
-			//left: 50%;
-			//top: 50%;
-			//transform: translate(-50%, -50%);
+		}
+	}
+
+	.content {
+		height: 100vh;
+		p {
+			color: white;
 		}
 	}
 }
